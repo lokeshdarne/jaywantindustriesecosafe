@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Us">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20"> {/* Adjusted padding */}
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 text-brand-text-primary">About Jaywant Industries</h1> {/* Adjusted margin */}
+
+    <div class="bg-brand-surface rounded-lg shadow-card border border-brand-border/50 p-8 md:p-10 mb-12 md:mb-16"> {/* Adjusted padding/margin */}
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center"> {/* Adjusted gap */}
+        <div>
+          <h2 class="text-3xl font-semibold mb-4 text-brand-primary">Our Mission</h2> {/* Emoji removed */}
+          <p class="text-brand-text-secondary mb-6 md:mb-0"> {/* Adjusted margin */}
+            To provide reliable, compliant, and environmentally sound bio-medical waste management solutions, safeguarding public health and preserving our planet for future generations.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-semibold mb-4 text-brand-primary">Our Vision</h2> {/* Emoji removed */}
+          <p class="text-brand-text-secondary">
+            To be the leading and most trusted partner for bio-medical waste management in the Yavatmal region, recognized for our commitment to excellence, sustainability, and community well-being.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 md:mb-20"> {/* Adjusted gap/margin */}
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl font-semibold mb-5 text-brand-text-primary">Who We Are</h2> {/* Emoji removed */}
+        <p class="text-brand-text-secondary mb-4">
+          Jaywant Industries operates a state-of-the-art Common Bio-medical Waste Treatment Facility (CBWTF) strategically located in the MIDC area of Yavatmal, Maharashtra. We are fully authorized by the Maharashtra Pollution Control Board (MPCB) and strictly adhere to the guidelines set by the Central Pollution Control Board (CPCB) and the Bio-medical Waste Management Rules, 2016 (and subsequent amendments).
+        </p>
+        <p class="text-brand-text-secondary">
+          Our dedicated team comprises experienced professionals passionate about environmental safety and public health. We leverage advanced technology and rigorous processes to ensure the safe and effective handling, treatment, and disposal of bio-medical waste.
+        </p>
+      </div>
+      <div class="order-1 md:order-2">
+        {/* Placeholder for an image - styled container */}
+        <div class="bg-brand-accent/20 rounded-lg aspect-video flex items-center justify-center text-brand-accent-dark border border-brand-accent/50">
+          <img src="/placeholder-facility.svg" alt="Jaywant Industries Facility Illustration" class="opacity-60 h-28 w-28"/>
+          {/* Replace with actual image later */}
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-brand-primary/5 rounded-lg shadow-subtle border border-brand-primary/20 p-8 md:p-12"> {/* Adjusted padding */}
+       <h2 class="text-3xl md:text-4xl font-semibold mb-10 text-center text-brand-primary">Our Core Values</h2> {/* Adjusted margin/size */}
+       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center max-w-4xl mx-auto"> {/* Centered grid */}
+          {/* Emojis removed, using text/styling */}
+          <li class="p-4 rounded-lg hover:bg-brand-accent/30 transition-colors"><strong class="text-brand-text-primary block text-lg mb-1">Compliance</strong> <span class="text-sm text-brand-text-secondary">Unwavering adherence to all regulations.</span></li>
+          <li class="p-4 rounded-lg hover:bg-brand-accent/30 transition-colors"><strong class="text-brand-text-primary block text-lg mb-1">Sustainability</strong> <span class="text-sm text-brand-text-secondary">Minimizing environmental footprint.</span></li>
+          <li class="p-4 rounded-lg hover:bg-brand-accent/30 transition-colors"><strong class="text-brand-text-primary block text-lg mb-1">Safety</strong> <span class="text-sm text-brand-text-secondary">Protecting our team, clients, and community.</span></li>
+          <li class="p-4 rounded-lg hover:bg-brand-accent/30 transition-colors"><strong class="text-brand-text-primary block text-lg mb-1">Reliability</strong> <span class="text-sm text-brand-text-secondary">Dependable and timely service.</span></li>
+          <li class="p-4 rounded-lg hover:bg-brand-accent/30 transition-colors"><strong class="text-brand-text-primary block text-lg mb-1">Innovation</strong> <span class="text-sm text-brand-text-secondary">Continuously improving our methods.</span></li>
+       </ul>
+    </div>
+
+  </div>
+</BaseLayout>

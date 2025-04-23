@@ -1,0 +1,23 @@
+---
+import content from '../content/content.json'; // Import the content
+
+const currentYear = new Date().getFullYear();
+const companyName = content.site.footerCompanyName;
+const footerTagline = content.site.footerTagline;
+const copyrightText = content.footer.copyright
+  .replace('{year}', currentYear.toString())
+  .replace('{companyName}', companyName);
+---
+
+<footer class="bg-brand-surface/50 border-t border-brand-border mt-16 py-8">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-brand-text-secondary text-sm">
+    <p>{copyrightText}</p>
+    <p class="mt-1">{footerTagline}</p>
+    <!-- Optional: Add links to privacy policy or terms -->
+    <!-- <div class="mt-2">
+      <a href="/privacy" class="hover:text-brand-text-primary mx-2">Privacy Policy</a>
+      <span class="mx-1">|</span>
+      <a href="/terms" class="hover:text-brand-text-primary mx-2">Terms of Service</a>
+    </div> -->
+  </div>
+</footer>

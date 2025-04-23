@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import content from '../content/content.json';
+
+const homeContent = content.home;
+const coreServices = homeContent.coreServices;
+const whyChooseUs = homeContent.whyChooseUs;
+---
+
+<BaseLayout title={homeContent.pageTitle}>
+	<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+
+		<!-- Hero Section -->
+		<section class="text-center mb-20 md:mb-24">
+			<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-brand-text-primary leading-tight" set:html={homeContent.hero.title} />
+			<p class="text-lg text-brand-text-secondary max-w-3xl mx-auto mb-8">
+				{homeContent.hero.subtitle}
+			</p>
+			<a href={homeContent.hero.ctaLink} class="inline-block bg-brand-primary hover:bg-brand-primary-dark text-brand-text-on_primary font-semibold py-3 px-8 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+        {homeContent.hero.ctaButton}
+      </a>
+		</section>
+
+		<!-- Key Services Section -->
+		<section class="mb-20 md:mb-24">
+			<h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-brand-text-primary">{coreServices.title}</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<Card
+					title={coreServices.collection.title}
+          imgSrc={coreServices.collection.imgSrc}
+          imgAlt={coreServices.collection.imgAlt}
+					body={coreServices.collection.body}
+					/>
+				<Card
+					title={coreServices.treatment.title}
+          imgSrc={coreServices.treatment.imgSrc}
+          imgAlt={coreServices.treatment.imgAlt}
+					body={coreServices.treatment.body}
+					/>
+				<Card
+					title={coreServices.compliance.title}
+          imgSrc={coreServices.compliance.imgSrc}
+          imgAlt={coreServices.compliance.imgAlt}
+					body={coreServices.compliance.body}
+					/>
+			</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section class="bg-brand-surface rounded-lg shadow-card border border-brand-border/50 p-8 md:p-12">
+			<h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-brand-text-primary">{whyChooseUs.title}</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				{whyChooseUs.points.map(point => (
+          <div class="text-center p-6 rounded-lg transition-colors hover:bg-brand-accent/30">
+            <div class="text-brand-primary text-3xl mb-3 font-bold">✓</div>
+            <h3 class="text-xl font-semibold mb-2 text-brand-text-primary">{point.title}</h3>
+            <p class="text-sm text-brand-text-secondary">{point.body}</p>
+          </div>
+        ))}
+			</div>
+		</section>
+
+	</div>
+</BaseLayout>
