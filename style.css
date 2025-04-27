@@ -11,6 +11,9 @@
   --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
   --border-radius: 12px; /* More rounded corners */
   --padding-section: 80px 0; /* Increased section padding */
+  --h1-font-size: 2.5em;
+  --h2-font-size: 2em;
+  --h3-font-size: 1.75em;
 }
 
 /* Basic Reset and Body Styling */
@@ -32,9 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
 
 .container {
   width: 90%;
@@ -71,6 +74,19 @@ header .container {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px; /* Increased space between logo and title */
+  vertical-align: middle;
+  border-radius: 8px; /* Added rounded corners */
 }
 
 .logo h1 {
@@ -121,6 +137,7 @@ header nav ul li a::after {
 header nav ul li a:hover {
   color: var(--accent-color);
   transform: translateY(-2px); /* Subtle lift effect */
+  transition: transform 0.3s ease-in-out;
 }
 
 header nav ul li a:hover::after {
@@ -130,7 +147,9 @@ header nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-  background: url('placeholder-hero.jpg') no-repeat center center/cover;
+  background: url('images/bg.jpg') no-repeat center center/cover;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4); /* Dim the background */
   color: #fff;
   text-align: center;
   padding: 120px 20px; /* More padding */
@@ -150,7 +169,9 @@ header nav ul li a:hover::after {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
   z-index: 0;
+  filter: blur(1px); /* Apply a blur effect */
 }
+
 
 .hero .container {
   position: relative;
@@ -192,6 +213,7 @@ header nav ul li a:hover::after {
   background-color: #66BB6A; /* Slightly darker green */
   transform: translateY(-3px); /* More pronounced lift */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Card Style - Glassmorphism */
@@ -211,6 +233,7 @@ header nav ul li a:hover::after {
 .card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 
@@ -438,19 +461,39 @@ header nav ul li a:hover::after {
 footer {
   background-color: var(--dark-color);
   color: #fff;
-  padding: 40px 0; /* More padding */
-  text-align: center;
+  padding: 20px 0; /* Reduced padding */
+  /* text-align: center; Removed as flexbox handles alignment */
 }
 
 footer .container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  /* flex-wrap: wrap; Removed to keep items on one line if possible */
+}
+
+footer nav {
+  order: 1; /* Left */
+  text-align: left;
+}
+
+/* Copyright */
+footer p:first-of-type {
+  order: 2; /* Center */
+  text-align: center;
+  flex-grow: 1; /* Allow it to take up space between nav and credit */
+  margin: 0 15px; /* Add some horizontal margin */
+}
+
+/* Developer Credit */
+footer p:last-of-type {
+  order: 3; /* Right */
+  text-align: right;
 }
 
 footer p {
-  margin-bottom: 20px; /* More margin */
-  font-size: 1em;
+  margin-bottom: 0;
+  font-size: 0.9em; /* Slightly smaller text */
 }
 
 footer nav ul {
@@ -458,12 +501,13 @@ footer nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap; /* Prevent nav items from wrapping */
+  justify-content: center; /* Center items if they don't fill space */
+  align-items: center; /* Vertically align items */
 }
 
 footer nav ul li {
-  margin: 0 20px; /* More spacing */
+  margin: 0 20px;
 }
 
 footer nav ul li a {
