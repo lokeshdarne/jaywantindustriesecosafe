@@ -8,21 +8,29 @@
   <link rel="icon" type="image/png" href="images/jaywant-industries-high-resolution-logo.png">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Add these meta tags in the head section: -->
+  <meta name="description" content="Jaywant Industries Ecosafe provides comprehensive and environmentally responsible biomedical waste management services for healthcare institutions.">
+  <meta name="keywords" content="biomedical waste management, healthcare waste, waste disposal, medical waste, eco-friendly waste management, Jaywant Industries">
+  <meta property="og:title" content="Jaywant Industries Ecosafe - Safe Waste Management">
+  <meta property="og:description" content="Comprehensive and environmentally responsible biomedical waste management services.">
+  <meta property="og:url" content="https://www.jaywantindustriesecosafe.in/">
+  <meta property="og:type" content="website">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logo">
-        <img src="images/jaywant-industries-high-resolution-logo.png" alt="Placeholder Logo">
+        <img src="images/jaywant-industries-high-resolution-logo.png" alt="Jaywant Industries Logo">
         <h1>Jaywant Industries Ecosafe</h1>
       </div>
-<nav>
+      <button class="mobile-nav-toggle">☰</button>
+      <nav>
         <div class="nav-items">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </nav>
@@ -61,20 +69,21 @@
     <div class="container">
       <h3>Our Operations in Action</h3>
       <div class="gallery-grid">
+        <!-- Update gallery images with proper alt text: -->
         <div class="gallery-item card">
-          <img src="images/Secure collection using color-coded bins.jpg" alt="Color-coded bins" style="width: 500px; height: 200px;">
+          <img src="images/Secure collection using color-coded bins.jpg" alt="Secure collection using color-coded bins">
           <p>Secure collection using color-coded bins.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/plant.jpg" alt="Color-coded bins" style="width: 500px; height: 200px;">
+          <img src="images/plant.jpg" alt="Treatment facility with advanced equipment">
           <p>Advanced treatment facilities ensuring safe disposal.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/sustainability.jpg" alt="Color-coded bins" style="width: 500px; height: 200px;">
+          <img src="images/sustainability.jpg" alt="Green sustainability initiatives">
           <p>Committed to green sustainability initiatives.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/staff.jpg" alt="Color-coded bins" style="width: 500px; height: 200px;">
+          <img src="images/staff.jpg" alt="Trained staff handling hazardous waste">
           <p>Our trained staff ensures safe handling of hazardous waste.</p>
         </div>
       </div>
@@ -83,19 +92,39 @@
 
 <footer>
     <div class="container">
-<nav>
+      <nav>
         <div class="nav-items">
           <ul>
-            <li><a href="/contact.html">Contact Us</a></li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/about.html">About Us</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
       </nav>
-      <p>&copy; 2023 Jaywant Industries Ecosafe. All rights reserved.</p>
+      <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
       <p>Website developed by Lokesh Darne</p>
     </div>
   </footer>
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Copyright year update
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+    
+    // Mobile navigation toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navItems = document.querySelector('header nav ul');
+    
+    if (mobileNavToggle && navItems) {
+      mobileNavToggle.addEventListener('click', function() {
+        navItems.classList.toggle('active');
+      });
+    }
+  });
+</script>
