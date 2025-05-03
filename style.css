@@ -298,8 +298,8 @@ header nav ul li a:focus::after {
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
-  padding: var(--space-md);
-  margin-bottom: var(--space-lg);
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
   transition: all 0.3s ease;
 }
 
@@ -348,24 +348,25 @@ header nav ul li a:focus::after {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
 }
 
 .gallery-item {
   text-align: center;
+  max-width: 100%;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: cover;
   border-radius: var(--border-radius);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .gallery-item p, .gallery-caption {
-  font-size: 1.25rem; /* Increased caption size */
+  font-size: 1rem; /* Smaller caption size */
   font-weight: 600; /* Enhanced caption visibility */
   margin-top: var(--space-xs);
   margin-bottom: 0;
@@ -583,6 +584,11 @@ footer nav ul li a {
     font-size: 1rem;
   }
   
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
+  }
+  
   footer .container {
     flex-direction: column;
     text-align: center;
@@ -591,6 +597,16 @@ footer nav ul li a {
   footer nav ul {
     justify-content: center;
     margin-top: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item img {
+    height: 160px;
   }
 }
 
