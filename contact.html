@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <base href="./">
+  <base href="./">
   <title>Contact Us - Jaywant Industries Ecosafe</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Contact Jaywant Industries Ecosafe for all your biomedical waste management needs. We provide expert solutions for healthcare facilities.">
+  <meta name="keywords" content="contact, biomedical waste management, waste disposal, Jaywant Industries">
+  <meta name="author" content="Jaywant Industries Ecosafe">
 </head>
 <body>
   <header>
@@ -71,7 +75,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="6" required></textarea>
           </div>
-          <button type="submit" class="btn">Send via WhatsApp</button>
+          <button type="submit" class="btn btn-whatsapp">Send via WhatsApp</button>
         </form>
 
         <script>
@@ -112,17 +116,36 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2023 Jaywant Industries Ecosafe. All rights reserved.</p>
-      <p>Website developed by Lokesh Darne</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
+      <div>
+        <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
+        <p>Website developed by Lokesh Darne</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div>
+        <a href="#">Privacy Policy</a>
+      </div>
     </div>
   </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Update copyright year
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Mobile navigation toggle
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navItems = document.querySelector('header nav ul');
+      
+      if (mobileNavToggle && navItems) {
+        mobileNavToggle.addEventListener('click', function() {
+          navItems.classList.toggle('active');
+        });
+      }
+    });
+  </script>
 </body>
 </html>

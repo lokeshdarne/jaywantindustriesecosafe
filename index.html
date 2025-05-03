@@ -7,14 +7,15 @@
   <title>Jaywant Industries Ecosafe - Safe Waste Management</title>
   <link rel="icon" type="image/png" href="images/jaywant-industries-high-resolution-logo.png">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Add these meta tags in the head section: -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="description" content="Jaywant Industries Ecosafe provides comprehensive and environmentally responsible biomedical waste management services for healthcare institutions.">
   <meta name="keywords" content="biomedical waste management, healthcare waste, waste disposal, medical waste, eco-friendly waste management, Jaywant Industries">
   <meta property="og:title" content="Jaywant Industries Ecosafe - Safe Waste Management">
   <meta property="og:description" content="Comprehensive and environmentally responsible biomedical waste management services.">
   <meta property="og:url" content="https://www.jaywantindustriesecosafe.in/">
   <meta property="og:type" content="website">
+  <meta name="author" content="Jaywant Industries Ecosafe">
 </head>
 <body>
   <header>
@@ -49,18 +50,11 @@
     <div class="container">
       <h3>Our Commitment to a Greener Future</h3>
       <div class="summary-content">
-        <p>
-          Jaywant Industries Ecosafe is dedicated to providing comprehensive and environmentally responsible biomedical waste management services. We handle the entire lifecycle of healthcare waste, from secure collection and safe transportation to advanced treatment and disposal. Our processes are designed to protect public health and the environment.
-        </p>
-        <p>
-          We specialize in the safe handling of hazardous waste, employing state-of-the-art treatment methods such as high-temperature incineration, autoclaving, and shredding. These techniques effectively neutralize harmful pathogens and reduce waste volume, ensuring safe disposal and minimizing environmental impact.
-        </p>
-        <p>
-          Beyond treatment, we are committed to sustainability through recycling and resource recovery initiatives. We actively seek opportunities to reuse treated by-products and divert waste from landfills, contributing to a circular economy. Our services also include expert regulatory compliance consulting and staff training to ensure our clients meet all necessary standards.
-        </p>
-        <p>
-          Operating 24/7 for emergency waste handling, Jaywant Industries Ecosafe is a reliable partner for healthcare institutions. We prioritize eco-friendly practices in every aspect of our operations, striving for a healthier, safer, and more sustainable world.
-        </p>
+        <ul class="list-disc pl-5">
+          <li><strong>Complete Waste Management:</strong> We handle the entire lifecycle of healthcare waste, from secure collection and transportation to advanced treatment and disposal, using ISO 9001-certified processes that protect public health.</li>
+          <li><strong>Advanced Treatment Technologies:</strong> Our facilities utilize precision-controlled incineration, autoclaving, and mechanical processing to neutralize pathogens and reduce waste volume by up to 90%.</li>
+          <li><strong>Sustainability Focus:</strong> Through innovative recycling programs and resource recovery initiatives, we divert significant waste from landfills while providing comprehensive compliance consulting to healthcare partners.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -69,41 +63,40 @@
     <div class="container">
       <h3>Our Operations in Action</h3>
       <div class="gallery-grid">
-        <!-- Update gallery images with proper alt text: -->
         <div class="gallery-item card">
-          <img src="images/Secure collection using color-coded bins.jpg" alt="Secure collection using color-coded bins">
-          <p>Secure collection using color-coded bins.</p>
+          <img src="images/Secure collection using color-coded bins.jpg" alt="Secure collection using color-coded bins" aria-describedby="caption-1">
+          <p id="caption-1" class="gallery-caption">Secure collection using color-coded bins.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/plant.jpg" alt="Treatment facility with advanced equipment">
-          <p>Advanced treatment facilities ensuring safe disposal.</p>
+          <img src="images/plant.jpg" alt="Treatment facility with advanced equipment" aria-describedby="caption-2">
+          <p id="caption-2" class="gallery-caption">Advanced treatment facilities ensuring safe disposal.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/sustainability.jpg" alt="Green sustainability initiatives">
-          <p>Committed to green sustainability initiatives.</p>
+          <img src="images/sustainability.jpg" alt="Green sustainability initiatives" aria-describedby="caption-3">
+          <p id="caption-3" class="gallery-caption">Committed to green sustainability initiatives.</p>
         </div>
         <div class="gallery-item card">
-          <img src="images/staff.jpg" alt="Trained staff handling hazardous waste">
-          <p>Our trained staff ensures safe handling of hazardous waste.</p>
+          <img src="images/staff.jpg" alt="Trained staff handling hazardous waste" aria-describedby="caption-4">
+          <p id="caption-4" class="gallery-caption">Our trained staff ensures safe handling of hazardous waste.</p>
         </div>
       </div>
     </div>
   </section>
 
-<footer>
+  <footer>
     <div class="container">
-      <nav>
-        <div class="nav-items">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
-      <p>Website developed by Lokesh Darne</p>
+      <div>
+        <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
+        <p>Website developed by Lokesh Darne</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div>
+        <a href="#">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 </body>
