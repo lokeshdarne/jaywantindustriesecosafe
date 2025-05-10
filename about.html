@@ -6,7 +6,7 @@
    <base href="./">
   <title>About Us - Jaywant Industries Ecosafe</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -80,7 +80,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2023 Jaywant Industries Ecosafe. All rights reserved.</p>
+      <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
       <p>Website developed by Lokesh Darne</p>
       <nav>
         <div class="nav-items">
@@ -94,5 +94,20 @@
       </nav>
     </div>
   </footer>
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navList = document.querySelector('header nav ul');
+    if (navToggle && navList) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+    }
+    // Copyright year update
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
 </body>
 </html>

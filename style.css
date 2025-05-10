@@ -488,28 +488,24 @@ header nav ul li a:focus::after {
 footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding: var(--space-lg) 0;
+  padding: var(--space-sm) 0;
 }
-
 footer .container {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 10%; /* Standardized footer spacing */
+  padding: 1rem 5%; /* Reduced vertical and horizontal spacing */
   flex-wrap: wrap;
 }
-
 footer p {
   margin-bottom: var(--space-sm);
   color: #F8F9FA; /* WCAG AA compliant contrast */
 }
-
 footer nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
 }
-
 footer nav ul li a {
   color: #F8F9FA; /* WCAG AA compliant contrast */
   text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* Improved readability */
