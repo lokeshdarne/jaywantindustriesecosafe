@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <base href="./">
   <title>Services - Jaywant Industries Ecosafe</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logo">
+        <img src="images/jaywant-industries-high-resolution-logo.png" alt="Jaywant Industries Logo">
         <h1>Jaywant Industries Ecosafe</h1>
       </div>
+      <button class="mobile-nav-toggle">☰</button>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -33,38 +38,79 @@
   <section class="services-list section-padding bg-light">
     <div class="container">
       <div class="service-item card">
-        <h3>Biomedical Waste Collection & Transportation</h3>
-        <p>We provide secure and compliant collection of biomedical waste using industry-standard color-coded bins. Our trained personnel ensure safe handling and timely transportation to authorized treatment centers, maintaining the integrity of the waste stream throughout the process.</p>
+        <h3 class="text-2xl font-bold">Biomedical Waste Collection & Transportation</h3>
+        <p>We provide secure collection and safe transportation of all types of biomedical waste from healthcare facilities. Our services include:</p>
+        <ul class="list-disc pl-5">
+          <li>Color-coded bins and bags for proper waste segregation</li>
+          <li>Customizable pickup schedules to meet your facility's needs</li>
+          <li>GPS-tracked transportation vehicles compliant with ISO standards</li>
+        </ul>
       </div>
+
       <div class="service-item card">
-        <h3>Waste Treatment & Disposal</h3>
-        <p>Utilizing advanced technologies, we offer effective treatment and disposal of hazardous biomedical waste. Our methods include high-temperature incineration, autoclaving, and shredding, designed to neutralize pathogens, reduce volume, and ensure environmentally safe disposal in accordance with strict regulations.</p>
+        <h3 class="text-2xl font-bold">Advanced Treatment & Disposal</h3>
+        <p>Our ISO 9001-certified treatment facilities employ multiple technologies to safely process different types of biomedical waste:</p>
+        <ul class="list-disc pl-5">
+          <li>High-temperature incineration for pathological waste</li>
+          <li>Autoclaving for infectious materials</li>
+          <li>Chemical disinfection for liquid waste</li>
+        </ul>
       </div>
+
       <div class="service-item card">
-        <h3>Recycling & Resource Recovery</h3>
-        <p>Committed to eco-sustainability, we implement recycling and resource recovery programs for treated by-products. By diverting waste from landfills and exploring opportunities for reuse, we contribute to a more circular economy and minimize the environmental footprint of healthcare waste.</p>
+        <h3 class="text-2xl font-bold">Recycling & Resource Recovery</h3>
+        <p>Our circular economy approach focuses on maximizing resource recovery while minimizing environmental impact:</p>
+        <ul class="list-disc pl-5">
+          <li>Recovery of metals from treated medical equipment</li>
+          <li>Conversion of treated organic waste into energy</li>
+          <li>Diversion of 40% of processed materials from landfills</li>
+        </ul>
       </div>
+
       <div class="service-item card">
-        <h3>Regulatory Compliance & Staff Training</h3>
-        <p>Navigating complex regulations can be challenging. We provide expert consulting to help healthcare institutions understand and comply with all relevant biomedical waste management rules and standards. We also offer comprehensive staff training programs to ensure proper waste segregation, handling, and storage practices.</p>
+        <h3 class="text-2xl font-bold">Regulatory Compliance & Staff Training</h3>
+        <p>Our comprehensive compliance solutions help healthcare facilities meet all regulatory requirements:</p>
+        <ul class="list-disc pl-5">
+          <li>Expert consulting on biomedical waste management regulations</li>
+          <li>Hands-on staff training for proper waste handling protocols</li>
+          <li>Documentation systems for audit-ready record keeping</li>
+        </ul>
       </div>
-      <!-- Removed 24/7 Emergency Waste Handling section -->
+    </div>
+  </section>
     </div>
   </section>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
-      <p>&copy; 2023 Jaywant Industries Ecosafe. All rights reserved.</p>
+      <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
       <p>Website developed by Lokesh Darne</p>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </footer>
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navList = document.querySelector('header nav ul');
+    if (navToggle && navList) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+    }
+    // Copyright year update
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
 </body>
 </html>

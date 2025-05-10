@@ -3,23 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <base href="./">
   <title>About Us - Jaywant Industries Ecosafe</title>
-  <link rel="stylesheet" href="/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
       <div class="logo">
+        <img src="images/jaywant-industries-high-resolution-logo.png" alt="Jaywant Industries Logo">
         <h1>Jaywant Industries Ecosafe</h1>
       </div>
+      <button class="mobile-nav-toggle">☰</button>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -32,12 +37,23 @@
 
   <section class="about-content section-padding bg-light">
     <div class="container">
-      <p>
-        Jaywant Industries Ecosafe stands as a pioneer in the field of safe and sustainable biomedical waste management. With a deep commitment to environmental protection and public health, we provide essential services to healthcare institutions, ensuring that hazardous waste is handled responsibly from generation to final disposal. Our approach combines cutting-edge technology with rigorous safety protocols and a strong focus on eco-friendly practices.
-      </p>
-      <p>
-        Our journey began with a vision to address the critical need for effective and environmentally sound solutions for healthcare waste. Over the years, we have grown into a trusted partner, known for our reliability, expertise, and unwavering dedication to sustainability. We believe that responsible waste management is not just a service, but a vital contribution to a healthier planet.
-      </p>
+      <h3>Our Journey</h3>
+      <div class="journey-section">
+        <h4>The Beginning</h4>
+        <p>
+          Jaywant Industries Ecosafe was founded with a clear purpose: to address the critical need for effective and environmentally sound solutions for healthcare waste management. What began as a small operation has evolved into a comprehensive service provider trusted by healthcare facilities across the region.
+        </p>
+        
+        <h4>Growth and Innovation</h4>
+        <p>
+          Over the years, we have continuously invested in advanced technologies and processes to improve our waste management capabilities. Our team has grown to include specialists in environmental science, healthcare compliance, and sustainable practices, allowing us to offer increasingly sophisticated solutions.
+        </p>
+        
+        <h4>Where We Are Today</h4>
+        <p>
+          Today, Jaywant Industries Ecosafe stands as a leading provider of biomedical waste management services, dedicated to ensuring the safe and environmentally responsible handling of healthcare waste. With a focus on innovation, compliance, and sustainability, we offer comprehensive solutions that protect both public health and the environment.
+        </p>
+      </div>
 
       <div class="about-sections">
         <div class="about-section">
@@ -52,32 +68,46 @@
             To create a healthier, waste-free world by setting the standard for responsible and sustainable biomedical waste management practices.
           </p>
         </div>
-        <!-- Removed Certifications section -->
         <div class="about-section">
-          <h3>Commitment to Green Initiatives and Community Education</h3>
+          <h3>Commitment to Green Initiatives</h3>
           <p>
-            Sustainability is at the core of everything we do. We continuously invest in green technologies and practices to minimize our environmental footprint. Furthermore, we are dedicated to educating our partners and the community about the importance of proper biomedical waste management and its impact on the environment.
+            Sustainability is at the core of everything we do. We continuously invest in green technologies and practices to minimize our environmental footprint. We are dedicated to educating our partners and the community about the importance of proper biomedical waste management and its impact on the environment.
           </p>
         </div>
       </div>
-
-      <!-- Removed A Message from Our Leadership section -->
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2023 Jaywant Industries Ecosafe. All rights reserved.</p>
+      <p>&copy; <span id="current-year">2023</span> Jaywant Industries Ecosafe. All rights reserved.</p>
       <p>Website developed by Lokesh Darne</p>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </footer>
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navList = document.querySelector('header nav ul');
+    if (navToggle && navList) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+      });
+    }
+    // Copyright year update
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
 </body>
 </html>
